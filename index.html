@@ -31,7 +31,7 @@
             let firstNumber = parseFloat(document.getElementById("first-number").value);
             let operator = document.getElementById("operator").value;
             let secondNumber = parseFloat(document.getElementById("second-number").value);
-            
+
         }
 
         function calculateResult(firstNumber, operator, secondNumber) {
@@ -50,6 +50,23 @@
                     return ("Error");
             }
         }
+
+        function validateUserInput (firstNumber, operator, secondNumber) {
+            let error = [];
+
+            if (isNaN(firstNumber)) {
+                error.push("First Number Is Incorrect!");
+            }
+            if (!operator.includes("-", "+", "*", "/")) {
+                error.push("Operator Is Incorrect!")
+            }
+            if (isNaN(secondNumber)) {
+                error.push("Second Number Is Incorrect!")
+            }
+
+            return error;
+        }
+    
     </script>
 
 </body>
