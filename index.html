@@ -22,6 +22,7 @@
     <script>
 
         let button = document.getElementById("btn");
+        let outputContainer = document.getElementById("output");
 
         button.addEventListener("click", calculate);
         console.log("Rēķināt poga nospiesta!")
@@ -62,7 +63,7 @@
             }
         }
 
-        function validateUserInput (firstNumber, operator, secondNumber) {
+        function validateUserInput(firstNumber, operator, secondNumber) {
             let error = [];
 
             if (isNaN(firstNumber)) {
@@ -87,7 +88,7 @@
             outputContainer.innerHTML = `Result: ${result}`
         }
 
-    
+
     </script>
 
 </body>
