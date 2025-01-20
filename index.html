@@ -18,6 +18,15 @@
 
     <p id="output"></p>
 
+    <style>
+        .error {
+            color: red;
+        }
+
+        .success {
+            color: green;
+        }
+    </style>
 
     <script>
 
@@ -80,11 +89,13 @@
         }
 
         function displayErrors(error) {
+            outputContainer.className = "error";
             outputContainer.innerHTML = error.join("<br>");
 
         }
 
         function displayResult(result) {
+            outputContainer.className = "success";
             outputContainer.innerHTML = `Result: ${result}`
         }
 
