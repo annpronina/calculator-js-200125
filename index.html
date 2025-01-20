@@ -26,6 +26,27 @@
         button.addEventListener("click", calculate);
         console.log("Rēķināt poga nospiesta!")
 
+
+        function calculate() {
+
+        }
+
+        function calculateResult(firstNumber, operator, secondNumber) {
+            console.log("Calculate Result")
+
+            switch (operator) {
+                case "+":
+                    return firstNumber + secondNumber;
+                case "-":
+                    return firstNumber - secondNumber;
+                case "*":
+                    return firstNumber * secondNumber;
+                case "/":
+                    return firstNumber / secondNumber;
+                default:
+                    return ("Error");
+            }
+        }
     </script>
 
 </body>
