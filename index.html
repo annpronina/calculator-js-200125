@@ -69,7 +69,7 @@
             if (isNaN(firstNumber)) {
                 error.push("First Number Is Incorrect!");
             }
-            if (!operator.includes("+", "-", "*", "/")) {
+            if (!["+", "-", "*", "/"].includes(operator)) {
                 error.push("Operator Is Incorrect!")
             }
             if (isNaN(secondNumber)) {
